@@ -134,7 +134,7 @@ namespace ArduinoRemoteControl
             }
             return false;
         }
-
+         
         /// <summary>
         /// Reads data from the serialport and extracts the mesages
         /// </summary>

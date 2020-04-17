@@ -27,3 +27,14 @@ C:\temp\ArduinoRemoteControl - kopie\ArduinoRemoteControl\ArduinoRemoteControl\o
 C:\temp\ArduinoRemoteControl - kopie\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\ArduinoRemoteControl.csproj.CoreCompileInputs.cache
 C:\temp\ArduinoRemoteControl - kopie\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.exe
 C:\temp\ArduinoRemoteControl - kopie\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.pdb
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\bin\Debug\LivingColorRemoteControl.exe.config
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\bin\Debug\LivingColorRemoteControl.exe
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\bin\Debug\LivingColorRemoteControl.pdb
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\ArduinoRemoteControl.RemoteControlForm.resources
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.Properties.Resources.resources
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\ArduinoRemoteControl.csproj.GenerateResource.cache
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\ArduinoRemoteControl.csproj.CoreCompileInputs.cache
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.exe
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.pdb
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\ArduinoRemoteControl.csprojAssemblyReference.cache
+C:\Arduino\ArduinoCommunicationForms\ArduinoRemoteControl\ArduinoRemoteControl\obj\Debug\LivingColorRemoteControl.Form1.resources

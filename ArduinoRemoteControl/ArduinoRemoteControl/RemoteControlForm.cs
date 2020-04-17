@@ -17,7 +17,7 @@ namespace ArduinoRemoteControl
         private SerialMessenger serialMessenger;
         private Timer readMessageTimer;
         // TODO: Below fill in the actual Arduino COM port.
-        private string port = "COM3";
+        private string port = "COM5";
         private int speed = 9600;
 
         public RemoteControlForm()
@@ -27,34 +27,32 @@ namespace ArduinoRemoteControl
             MessageBuilder messageBuilder = new MessageBuilder();
             serialMessenger = new SerialMessenger(port, speed, messageBuilder);
 
-            readMessageTimer = new Timer();
-            readMessageTimer.Interval = 10;
-            readMessageTimer.Tick += new EventHandler(ReadMessageTimer_Tick);
-        }
 
-        private void connectButton_Click(object sender, EventArgs e)
-        {
+            MessageBox.Show("Ready, Set, Go!", "Get Ready!", MessageBoxButtons.OK);
+
+            readMessageTimer = new Timer();
+            readMessageTimer.Interval = 500;
+            readMessageTimer.Tick += new EventHandler(ReadMessageTimer_Tick);
+
+                            MessageBox.Show("Ready Set go!", "Get Ready", MessageBoxButtons.OK);
+
             try
             {
                 serialMessenger.Connect();
                 readMessageTimer.Enabled = true;
-                labelConnected.Text = "Connected to Arduino\n" + port;
-                labelConnected.BackColor = Color.LightGreen;
+                Console.WriteLine("Connected!");
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
+
+
+            Console.WriteLine();
+             
         }
 
-        private void disconnecButton_Click(object sender, EventArgs e)
-        {
-            disconnect();
-            labelConnected.Text = "not connected";
-            labelConnected.BackColor = Color.Red;
-
-        }
-
+ 
         private void ReadMessageTimer_Tick(object sender, EventArgs e)
         {
             string message = serialMessenger.ReadMessages();
@@ -76,27 +74,18 @@ namespace ArduinoRemoteControl
             // but the '\r' must also be removed, otherwise comparing the message strings will not work.
             message = message.Trim();
             // Add message to the listBox.
-            listBoxMessagesReceived.Items.Add(message);
+            listBoxHistory.Items.Add(message);
+       //     MessageBox.Show(message, "result", MessageBoxButtons.OK);
             // TODO: Below fill in your message handling.
-           
-        }
 
-        private int getParamValue(string message)
-        {
-            int colonIndex = message.IndexOf(':');
-            if (colonIndex != -1)
-            {
-                string param = message.Substring(colonIndex + 1);
-                int value;
-                bool done = int.TryParse(param, out value);
-                if (done)
-                {
-                    return value;
-                }
-            }
-            throw new ArgumentException("message contains no value parameter");
-        }
+ 
 
+//            if (message != "GO!")
+//            {
+//                MessageBox.Show("Ready Set go!", "Get Ready", MessageBoxButtons.OK);
+//            }
+        }
+ 
         private void RemoteControlForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             disconnect();
@@ -113,16 +102,11 @@ namespace ArduinoRemoteControl
             {
                 MessageBox.Show(exception.Message);
             }
-        }
+        } 
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void RemoteControlForm_Load(object sender, EventArgs e)
         {
-            listBoxMessagesReceived.Items.Clear();
-        }
-
-        private void buttonSend_Click(object sender, EventArgs e)
-        {
-            serialMessenger.SendMessage(textBoxSendMessage.Text);
-        }
+            
+        } 
     }
 }
